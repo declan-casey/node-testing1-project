@@ -10,12 +10,14 @@ describe('[Exercise 1] trimProperties', () => {
   })
   it('[2] returns a copy, leaving the original object intact', () => {
     // ✨ test away
+    
   })
 })
 
 describe('[Exercise 2] trimPropertiesMutation', () => {
   it('[3] returns an object with the properties trimmed', () => {
     // ✨ test away
+
   })
   it('[4] the object returned is the exact same one we passed in', () => {
     // ✨ test away
@@ -25,6 +27,9 @@ describe('[Exercise 2] trimPropertiesMutation', () => {
 describe('[Exercise 3] findLargestInteger', () => {
   it('[5] returns the largest number in an array of numbers', () => {
     // ✨ test away
+    const arr = [1, 5, 8, 2, 8, 22]
+    const actual = utils.findLargestInteger(arr)
+    expect(actual).toEqual(22)
   })
 })
 

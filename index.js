@@ -8,6 +8,9 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  const newObj = {...obj}
+  Object.keys(newObj).map( keys =>( newObj[keys] = newObj[keys].trim()))
+  return newObj
 }
 
 /**
@@ -31,9 +34,13 @@ function trimPropertiesMutation(obj) {
  * findLargestInteger([2, 1, 7, 3, 14, 7]) // returns 14
  */
 function findLargestInteger(integers) {
-  // ✨ implement
+  const largest = Math.max(...integers)
+  return largest
 }
 
+const intArr = [1, 5, 8, 2, 8, 22]
+
+console.log(findLargestInteger(intArr))
 class Counter {
   /**
    * [Exercise 4A] Counter creates a counter
@@ -41,6 +48,7 @@ class Counter {
    */
   constructor(initialNumber) {
     // ✨ initialize whatever properties are needed
+    this.number = initialNumber;
   }
 
   /**
@@ -57,9 +65,15 @@ class Counter {
    */
   countDown() {
     // ✨ implement
+    while( this.number > 0 || this.number === 0){
+      console.log(this.number - 1)
+    }
   }
+  
 }
+const counter = new Counter(8)
 
+console.log(counter.countDown())
 class Seasons {
   /**
    * [Exercise 5A] Seasons creates a seasons object
@@ -150,8 +164,16 @@ class Car {
  *    // error.message is "number must be a number"
  * })
  */
-function isEvenNumberAsync(number) {
+async function isEvenNumberAsync(number) {
   // ✨ implement
+  const status = () => { 
+    if(number % 2 === 0){
+      status = true
+  } else {
+    status = false
+  }
+}
+return status
 }
 
 module.exports = {
